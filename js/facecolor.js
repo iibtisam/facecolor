@@ -14,8 +14,11 @@ $( window ).resize(function() {
 
 
 var homeCols = function(){
-	var winHeight = $(window).height();
+
+	var winHeight = $(window).height() - 65;
 	var winWidth = $(window).width();
+
+	$('.parallax-bg').css('height',winHeight);
 	$('.homeColumn').css('height',winHeight);
 	$('.homeColumn').css('width',(winWidth/3)-1);
 

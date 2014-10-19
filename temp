@@ -668,7 +668,7 @@
     <div class="testimonial-slider flexslider"><p class="testimonial-icon"><i class="icon-quote-left"></i></p><h3 class="title"><span>Our Testimonials</span></h3>
       <ul class="slides styled-list">
       
-      <li class="testimonial-slide"><p class="client-testimonial">Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.</p><div class="client-info">John Doe, ThemeForest</div></li>
+      <li class="testimonial-slide"><p class="client-testimonial">Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.</p><div class="client-info">John Doe, </div></li>
       
       <li class="testimonial-slide"><p class="client-testimonial">Sed at felis neque, ut dapibus enim. Donec cursus risus at enim aliquam dapibus. Praesent a egestas elit. Integer bibendum purus vel nunc aliquam laoreet. In pellentesque turpis eget nisl volutpat ullamcorper. Morbi cursus velit et metus mattis ac aliquet enim tempor.</p><div class="client-info">Mike Smith, CodeCanyon</div></li>
       

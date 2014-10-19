@@ -40,3 +40,33 @@
 
 }
 
+nav.dark .main-menu a:hover,
+nav.dark .main-menu a.active{
+	color: #ffffff;
+}
+
+nav.dark .main-menu{
+	line-height: 19px;
+	height: 19px;
+}
+nav.dark .main-menu li{
+	margin: 0px; 
+}
+nav.dark .main-menu div{
+	background: url("../images/facecolor/menu_bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    height: 33px;
+    margin-left: 10px;
+    padding-top: 31px;
+    position: relative;
+    text-align: center;
+    top: -25px;
+    width: 118px;
+}
+
+nav.dark .main-menu a:hover div{
+	top: -10px;
+	height: 41px;
+	padding-top: 23px;
+
+}
