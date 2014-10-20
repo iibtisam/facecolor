@@ -103,7 +103,7 @@ var init = function() {
 	
 	  function fullscreenImgHeight(){
 
-		  $('#home').css({height:window_height});
+		  //$('#home').css({height:window_height});
 /*		  var headerH = $('nav').outerHeight();
           $("#home").css('marginBottom',-headerH);*/
 		  

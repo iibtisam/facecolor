@@ -19,6 +19,7 @@ var homeCols = function(){
 	var winWidth = $(window).width();
 
 	$('.parallax-bg').css('height',winHeight);
+	$('.home-parallax').css('height',winHeight);
 	$('.homeColumn').css('height',winHeight);
 	$('.homeColumn').css('width',(winWidth/3)-1);
 
