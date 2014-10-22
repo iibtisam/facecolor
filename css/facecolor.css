@@ -64,9 +64,3 @@ nav.dark .main-menu div{
     width: 118px;
 }
 
-nav.dark .main-menu a:hover div{
-	top: -10px;
-	height: 41px;
-	padding-top: 23px;
-
-}
