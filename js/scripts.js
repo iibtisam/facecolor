@@ -676,9 +676,9 @@ $(document).ready(function()
  
  
     //img overlays
-    $('.team-thumb').on('mouseover', function()
+    $('.services-thumb').on('mouseover', function()
     {
-        var overlay = $(this).find('.team-overlay');
+        var overlay = $(this).find('.services-overlay');
         var content = $(this).find('.overlay-content');
 
         overlay.stop(true,true).fadeIn(600);
@@ -687,7 +687,7 @@ $(document).ready(function()
         
     }).on('mouseleave', function()
     {
-        var overlay = $(this).find('.team-overlay');
+        var overlay = $(this).find('.services-overlay');
         var content = $(this).find('.overlay-content');
         
         content.stop().animate({'top': "60%",

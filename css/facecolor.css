@@ -64,3 +64,47 @@ nav.dark .main-menu div{
     width: 118px;
 }
 
+#news-container .news-bg{
+	background: url("../images/facecolor/pattern_news.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-radius: 2px;
+	width: 0;
+	overflow: hidden;
+	margin: 0px;
+}
+
+.news-bg .news-image{
+	margin: 2px; 
+	height:180px; 
+	overflow:hidden
+}
+
+.news-bg .news-image img{
+	width:100%;
+	min-height: 100%;
+}
+
+.news-bg .news-date{
+	background: #ff0099;
+   	margin: 2px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.news-bg .news-desc{
+	padding:5px 10px;
+	height: 85px;
+	display: inline-block;
+}
+
+.news-arrow {
+    float: left;
+    padding-right: 5px;
+    padding-top: 95px;
+    width: 30px;
+    cursor:pointer;
+}
+
+
+.black-background{
+	background-color: #000000;
+}

@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="css/flexslider.css" type="text/css"> 
   <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen"/><!-- PrettyPhoto -->  
   <link rel="stylesheet" href="css/font-awesome.css" type="text/css"/><!-- PrettyPhoto -->    
+  <link rel="stylesheet" href="css/blueimp.css">
+  <link rel="stylesheet" href="css/bootstrap-image-gallary.css" type="text/css">
   <link rel="stylesheet" href="css/shortcodes.css" type="text/css"/>  
   <link rel="stylesheet" href="css/media.css"><!-- Media Queries -->         
     
@@ -33,284 +35,831 @@
   <link rel="stylesheet" href="css/facecolor.css" type="text/css">
        
     <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-       
-    
 </head>
 
 <body class="onepage">
-
-
-<div id="load"></div>
+  <div id="load"></div>
   <!-- START PAGE WRAP -->    
-  <div class="page-wrap">
-  
+    <div class="page-wrap">
 
-  <!-- START NAVIGATION -->
-  <nav class="dark">
-   <!-- START CONTAINER --> 
-    <div class="container clearfix">      
-        <div class="four columns">      
+    <!-- START NAVIGATION -->
+      <nav class="dark">
+        <!-- START CONTAINER --> 
+        <div class="container clearfix">      
+          <div class="four columns">      
             <!-- START LOGO --> 
             <div class="logo">
              <a href="#home"><img src="images/facecolor/logo.png" title="logo" alt="Logo"/></a>
             </div>
             <!-- END LOGO -->     
-        </div><!-- END FOUR COLUMNS -->   
-        
-                 
-        <div class="twelve columns">                
+          </div><!-- END FOUR COLUMNS -->   
+          <div class="twelve columns">                
             <!-- START NAVIGATION MENU ITEMS -->
             <ul class="main-menu" id="nav">
-                <li><a href="#home">      <div> Home       </div>  </a></li>
-                <li><a href="#about">     <div> FACE NEWS  </div>  </a></li>
-                <li><a href="#aboutus">   <div> ABOUT US   </div>  </a></li>
-                <li><a href="#joinus">    <div> JOIN US    </div>  </a></li>
-                <li><a href="#contactus"> <div> CONTACT    </div>  </a></li>
-            </ul>
-            <!-- END NAVIGATION MENU ITEMS -->        
-        </div><!-- END TWELVE COLUMNS --> 
-    </div><!-- END CONTAINER -->  
-  </nav>
-  <!-- END NAVIGATION -->
-  
-    
-  
-  
-  
+              <li><a href="#home">      <div> Home       </div>  </a></li>
+              <li><a href="#news">     <div> FACE NEWS  </div>  </a></li>
+              <li><a href="#aboutus">   <div> ABOUT US   </div>  </a></li>
+              <li><a href="#joinus">    <div> JOIN US    </div>  </a></li>
+              <li><a href="#contactus"> <div> CONTACT    </div>  </a></li>
+            </ul><!-- END NAVIGATION MENU ITEMS -->        
+          </div><!-- END TWELVE COLUMNS --> 
+        </div><!-- END CONTAINER -->  
+      </nav><!-- END NAVIGATION -->
 
-  <!-- START PORTFOLIO SECTION -->
-  <div id="portfolio" class="page" style="padding:0px;">
-  
-           <!-- START AJAX SECTION -->  
-            <div id="ajax-section">     
-             <div class="container clearfix"> 
+    <!-- START HOME PARALLAX SECTION --> 
+      <div id="home" class="parallax menu-items">
+        <div class="bg1 parallax-bg"></div><!-- END PARALLAX BACKGROUND -->
+        <div class="overlay"></div><!-- END PATTERN OVERLAY -->
+        <!-- START PORTFOLIO WRAP -->  
+        <div style="position:relative;">
+          <div class="one-fifth homeColumn homeColumn1" onclick="openColumnInfo(1)" >
+            <div class="overlayHomeColumn"></div>
+            <div class="overlayHomeColumnText"> COMMERCIAL PRODUCTION SERVICES</div>
+          </div>
+          <div class="one-fifth homeColumn homeColumn2" onclick="openColumnInfo(2)" >
+            <div class="overlayHomeColumn"></div>
+            <div class="overlayHomeColumnText"> INDEPENDENT FLIM PRODUCTION</div>
+          </div>
+          <div class="one-fifth homeColumn homeColumn3" onclick="openColumnInfo(3)" >
+            <div class="overlayHomeColumn"></div>
+            <div class="overlayHomeColumnText"> EVENT PROMOTIONS</div>
+          </div>
+        </div><!-- END PORTFOLIO WRAPPER -->
+      </div><!-- END HOME PARALLAX SECTION -->
 
-                
-              <!-- START PROJECT NAVIGATION --> 
-              <div id="project-navigation">
-                  <ul>
-                      <li id="nextProject"><a href="#"></a></li>
-                      <li id="prevProject"><a href="#"></a></li>
-                   </ul>  
-               </div>
-               <!-- END PROJECT NAVIGATION --> 
-                
-               <!-- START PROJECT CLOSE BUTTON -->
-               <div id="closeProject">
-                    <a href="#loader"><i class="icon-remove"></i></a>               
-               </div>  
-               <!-- START PROJECT CLOSE BUTTON -->
-                 
-               <!-- START PROJECT LOADER SECTION -->
-               <div id="loader"></div>
-               <!-- END PROJECT CLOSE BUTTON -->
-                     
-               <!-- START AJAX CONTENT -->
-               <div id="ajax-content-outer">
-                    <div id="ajax-content-inner"></div>
-               </div>
-               <!-- END AJAX CONTENT -->
+    <!-- START commercial SECTION --> 
+      <div id="commercial" class="page black-background" style="display:none;">
+        <div class="fullwidth black">  
+          <div class="container"> 
+            <div class="row">            
+              <div class="sixteen columns">               
+
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb img-wrp">
+                    <img src="images/commercial/1.jpg" alt="commercial">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#commercial-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER --> 
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb img-wrp">
+                    <img src="images/commercial/2.jpg" alt="commercial">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#commercial-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER -->            
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb img-wrp">
+                    <img src="images/commercial/3.jpg" alt="commercial">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#commercial-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER -->            
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb img-wrp">
+                    <img src="images/commercial/4.jpg" alt="commercial">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#commercial-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER -->            
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb img-wrp">
+                    <img src="images/commercial/5.jpg" alt="commercial">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#commercial-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER -->            
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb img-wrp">
+                    <img src="images/commercial/6.jpg" alt="commercial">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#commercial-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER -->            
                       
-        </div><!-- END CONTAINER -->
-        
-    </div>
-           <!-- END AJAX SECTION -->          
-              
-         <div class="clear"></div>  
+              </div><!-- END SIXTEEN COULMNS --> 
+            </div> <!-- END ROW -->     
+          </div><!-- END CONTAINER --> 
+        </div>
+      </div>
+      <!-- END commercial SECTION --> 
+
+
+    <!-- START film SECTION --> 
+      <div id="film" class="page black-background" style="display:none;">
+        <div class="fullwidth black">  
+          <div class="container"> 
+            <div class="row">            
+              <div class="sixteen columns">               
+
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb film-thumb img-wrp">
+                    <img src="images/film/1.jpg" alt="film">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#film-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER --> 
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb film-thumb img-wrp">
+                    <img src="images/film/2.jpg" alt="film">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#film-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER --> 
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb film-thumb img-wrp">
+                    <img src="images/film/3.jpg" alt="film">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#film-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER --> 
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb film-thumb img-wrp">
+                    <img src="images/film/4.jpg" alt="film">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#film-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER --> 
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb film-thumb img-wrp">
+                    <img src="images/film/5.jpg" alt="film">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#film-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER --> 
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb film-thumb img-wrp">
+                    <img src="images/film/6.jpg" alt="film">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#film-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER --> 
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb film-thumb img-wrp">
+                    <img src="images/film/7.jpg" alt="film">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#film-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER --> 
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb film-thumb img-wrp">
+                    <img src="images/film/8.jpg" alt="film">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#film-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER --> 
+
+                <!-- START services MEMBER --> 
+                <div class="services-logo">
+                  <!-- START services THUMBNAIL -->  
+                  <div class="services-thumb film-thumb img-wrp">
+                    <img src="images/film/9.jpg" alt="film">  
+                    <!-- START services OVERLAY -->  
+                    <div class="services-overlay">
+                      <div class="img-overlay"></div>
+                      <!-- START OVERLAY CONTENT -->  
+                      <div class="overlay-content">                            
+                        <h4>Title 1</h4>
+                        <p><a data-toggle="modal" href="#film-detail" class="modal-popup-link view-profile">View Detail</a></p>
+                      </div><!-- END OVERLAY CONTENT -->  
+                    </div><!-- END services OVERLAY -->          
+                  </div><!-- END services THUMBNAIL -->  
+                  <div class="services-desc">
+                    <h4>NAME</h4>
+                  </div>
+                </div><!-- END services MEMBER --> 
+
+                      
+              </div><!-- END SIXTEEN COULMNS --> 
+            </div> <!-- END ROW -->     
+          </div><!-- END CONTAINER --> 
+        </div>
+      </div>
+      <!-- END services SECTION --> 
+
+
+
+
+
+
       
-             
-    
-   
-  </div>
-  <!-- END PORTFOLIO SECTION -->
-    
+    <!-- START FACENEWS PARALLAX SECTION -->
+      <div id="news" class="parallax menu-items">
+        <div class="bg2 parallax-bg"></div><!-- END PARALLAX BACKGROUND -->
+        <div class="overlay"></div><!-- END PATTERN OVERLAY -->
+        <div class="container clearfix news-container">
 
-  <!-- START PARALLAX SECTION --> 
-  <div id="home" class="parallax">
-    <div class="bg1 parallax-bg"></div><!-- END PARALLAX BACKGROUND -->
-    <div class="overlay"></div><!-- END PATTERN OVERLAY -->
-    
+          <div class="news-arrow"  onclick="showPreviousNews();">
+            <img src="images/facecolor/left_arrow.png" />
+          </div>
+          <div id="news-container" style="float:left;">
 
+            <div class="columns news-bg">
+              <div class="news-image">
+                  <img src="images/facecolor/news1.jpg">
+              </div>
+              <div class="news-date">20/5/2014</div>
+              <div class="news-desc">The 4th Beijing International Film Festival "FACECOLOR ROAD SHOW"</div>
+            </div>
 
+            <div class="columns news-bg">
+              <div class="news-image">
+                  <img src="images/facecolor/news2.jpg">
+              </div>
+              <div class="news-date">20/5/2014</div>
+              <div class="news-desc">Movie "slag transport partner" topped the major video categories Home</div>
+            </div>
 
+            <div class="columns news-bg">
+              <div class="news-image">
+                  <img src="images/facecolor/news3.jpg">
+              </div>
+              <div class="news-date">20/5/2014</div>
+              <div class="news-desc">"Slag transport partner" movie theme song mv exposure</div>
+            </div>
 
+            <div class="columns news-bg">
+              <div class="news-image">
+                  <img src="images/facecolor/news4.jpg">
+              </div>
+              <div class="news-date">20/5/2014</div>
+              <div class="news-desc">爱奇艺全网络独家首播《WOOH x3》</div>
+            </div>
 
+            <div class="columns news-bg">
+              <div class="news-image">
+                  <img src="images/facecolor/news2.jpg">
+              </div>
+              <div class="news-date">20/5/2014</div>
+              <div class="news-desc">Movie "slag transport partner" topped the major video categories Home</div>
+            </div>
 
+            <div class="columns news-bg">
+              <div class="news-image">
+                  <img src="images/facecolor/news3.jpg">
+              </div>
+              <div class="news-date">20/5/2014</div>
+              <div class="news-desc">"Slag transport partner" movie theme song mv exposure</div>
+            </div>
 
+            <div class="columns news-bg">
+              <div class="news-image">
+                  <img src="images/facecolor/news4.jpg">
+              </div>
+              <div class="news-date">20/5/2014</div>
+              <div class="news-desc">爱奇艺全网络独家首播《WOOH x3》</div>
+            </div>
 
+            <div class="columns news-bg">
+              <div class="news-image">
+                  <img src="images/facecolor/news2.jpg">
+              </div>
+              <div class="news-date">20/5/2014</div>
+              <div class="news-desc">Movie "slag transport partner" topped the major video categories Home</div>
+            </div>
 
+            <div class="columns news-bg">
+              <div class="news-image">
+                  <img src="images/facecolor/news3.jpg">
+              </div>
+              <div class="news-date">20/5/2014</div>
+              <div class="news-desc">"Slag transport partner" movie theme song mv exposure</div>
+            </div>
 
+            <div class="columns news-bg">
+              <div class="news-image">
+                  <img src="images/facecolor/news4.jpg">
+              </div>
+              <div class="news-date">20/5/2014</div>
+              <div class="news-desc">爱奇艺全网络独家首播《WOOH x3》</div>
+            </div>
 
+          </div>
+          <div class="news-arrow" style="float:right;" onclick="showNextNews();">
+            <img src="images/facecolor/right_arrow.png" />
+          </div>
 
+        </div><!-- END CONTAINER -->
+      </div><!-- END FACENEWS PARALLAX SECTION --> 
 
-
-         
-   <!-- START PORTFOLIO WRAP -->  
-   <div style="position:relative;">
-    
-    <div class="one-fifth homeColumn homeColumn1" onclick="openColumnInfo(1)" >
-      <div class="overlayHomeColumn"></div>
-      <div class="overlayHomeColumnText"> INDEPENDENT FLIM PRODUCTION</div>
-    </div>
-    <div class="one-fifth homeColumn homeColumn2" onclick="openColumnInfo(2)" >
-      <div class="overlayHomeColumn"></div>
-      <div class="overlayHomeColumnText"> INDEPENDENT FLIM PRODUCTION</div>
-    </div>
-    <div class="one-fifth homeColumn homeColumn3" onclick="openColumnInfo(3)" >
-      <div class="overlayHomeColumn"></div>
-      <div class="overlayHomeColumnText"> INDEPENDENT FLIM PRODUCTION</div>
-    </div>
-    
-                   
-             
-   </div>
-   <!-- END PORTFOLIO WRAPPER -->
-    
-  </div>
-  <!-- END PARALLAX SECTION -->
-
-    
-
-
-
-
-
-  <!-- START PARALLAX SECTION -->
-  <div id="joinus" class="parallax">
+    <!-- START JOINUS PARALLAX SECTION -->
+      <div id="joinus" class="parallax menu-items">
         <div class="bg4 parallax-bg"></div><!-- END PARALLAX BACKGROUND -->
         <div class="overlay"></div><!-- END PATTERN OVERLAY -->
         <div class="container clearfix">
-                <div class="parallax-content">
-         <!-- START CONTACT DETAILS -->
-         <div class="contact-details">
-           <h2>support@FACECOLOR.com</h2>
-           <h1>1234-567-890</h1>
-           <h2>Address1, Street1, Block1, CHINA</h2>
-        </div>      
-      <!-- END CONTACT DETAILS -->
-                </div><!-- END PARALLAX CONTENT -->
-            </div><!-- END CONTAINER -->
-     </div>
-    <!-- END PARALLAX SECTION --> 
+          <div class="parallax-content">
+            <!-- START CONTACT DETAILS -->
+            <div class="contact-details">
+              <h2>support@FACECOLOR.com</h2>
+              <h1>1234-567-890</h1>
+              <h2>Address1, Street1, Block1, CHINA</h2>
+            </div>      
+            <!-- END CONTACT DETAILS -->
+          </div><!-- END PARALLAX CONTENT -->
+        </div><!-- END CONTAINER -->
+      </div><!-- END JOINUS PARALLAX SECTION --> 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- START CONTACT SECTION -->
-  <div id="contactus" class="page" style="padding-bottom:0px;">
-    
-    <div class="container"> 
-           <div class="row">  
-      <div class="sixteen columns">            
-              <!-- START TITLE -->              
-        <div class="title">
-          <h1>Contact Us</h1>
-                  <div class="subtitle">
-                      <p>We'd really love to <span class="highlight">hear from you</span> so why not drop us an email and <span class="highlight">we'll get back</span> to you as soon as we can.</p>
-                  </div><!-- END SUBTITLE -->
-                </div><!-- END TITLE -->                               
-      </div><!-- END SIXTEEN COLUMNS -->  
-           </div><!-- END ROW -->         
-          </div><!-- END CONTAINER -->         
-    <div class="container clearfix">
-      <div class="sixteen columns">
-        
-     <!-- START CONTACT BOX -->
-      <div class="contact-box">
-        <!-- START CONTACT FORM -->
-         <div id="contact-form">      
-            <form action="#" method="post">
-           
-                <div id="contact-input">
-                 <!--[if IE]>
-                    <label for="name">Name</label>
-                <![endif]-->
-                  <input type="text" name="contact[name]" id="name" placeholder="Name (required)" >
-                   <!--[if IE]>
+    <!-- START CONTACT SECTION -->
+      <div id="contactus" class="page menu-items" style="padding-bottom:0px;">
+        <div class="container"> 
+          <div class="row">  
+            <div class="sixteen columns">            
+            <div class="title">
+              <h1>Contact Us</h1>
+              <div class="subtitle">
+                <p>We'd really love to <span class="highlight">hear from you</span> so why not drop us an email and <span class="highlight">we'll get back</span> to you as soon as we can.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container clearfix">
+          <div class="sixteen columns">
+            <div class="contact-box">
+              <div id="contact-form">      
+                <form action="#" method="post">
+                  <div id="contact-input">
+                    <!--[if IE]>
+                      <label for="name">Name</label>
+                    <![endif]-->
+                    <input type="text" name="contact[name]" id="name" placeholder="Name (required)" >
+                    <!--[if IE]>
                       <label for="email">Email</label>
                     <![endif]-->
-                  <input type="text" name="contact[email]" id="email" placeholder="Email (required)">
-                   <!--[if IE]>
+                    <input type="text" name="contact[email]" id="email" placeholder="Email (required)">
+                    <!--[if IE]>
                       <label for="subject">Subject</label>
                     <![endif]-->
-                  <input type="text" name="contact[subject]" id="subject" placeholder="Subject" >
-                </div>
-                <div id="contact-textarea">
-                 <!--[if IE]>
+                    <input type="text" name="contact[subject]" id="subject" placeholder="Subject" >
+                  </div>
+                  <div id="contact-textarea">
+                    <!--[if IE]>
                       <label for="message">Your Message Here</label>
                     <![endif]-->
-                  <textarea name="contact[message]" id="message" cols="39" rows="4" placeholder="Your Message"></textarea>
-                </div>
-                <div id="contact-submit">
-                  <div>
-                    <input name="submit" type="submit" id="submit" tabindex="5" value="Post Comment" class="comment-submit small button">
+                    <textarea name="contact[message]" id="message" cols="39" rows="4" placeholder="Your Message"></textarea>
                   </div>
-                </div>
-              </form> 
-         <div class="clear"></div>
+                  <div id="contact-submit">
+                    <div>
+                      <input name="submit" type="submit" id="submit" tabindex="5" value="Post Comment" class="comment-submit small button">
+                    </div>
+                  </div>
+                </form> 
+                <div class="clear"></div>
+              </div>
+              <div class="result"></div>  
+            </div>
           </div>
-           <div class="result"></div>  
-    <!-- END CONTACT FORM -->
-  
-          
-    </div>
+        </div>
+        <div class="copyright">
+          <div class="container clearfix">
+            <div class="sixteen columns">   
+              <div class="copyright-logo"><a href="#"><img src="images/facecolor/logo.png" title="logo" alt="logo"/></a></div>   
+              <div class="social-icons">
+                <div class="social-icon social-email"><a href="mailto:hallo@example.com" target="_blank" data-original-title="Email">Email</a></div>
+                <div class="social-icon social-behance"><a href="#" target="_blank" data-original-title="Behance">Behance</a></div>
+                <div class="social-icon social-delicious"><a href="#" target="_blank" data-original-title="Delicious">Delicious</a></div>
+                <div class="social-icon social-deviantart"><a href="#" target="_blank" data-original-title="Deviantart">Deviantart</a></div>
+                <div class="social-icon social-facebook"><a href="#" target="_blank" data-original-title="Facebook">Facebook</a></div>
+                <div class="social-icon social-flickr"><a href="#" target="_blank" data-original-title="Flickr">Flickr</a></div>
+                <div class="social-icon social-forrst"><a href="#" target="_blank" data-original-title="Forrst">Forrst</a></div>
+              </div>
+              <p>&copy; 2014 All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- END CONTACT SECTION -->
 
-        <!-- END CONTACT BOX -->
-    </div> <!-- END SIXTEEN COLUMNS -->        
-  </div><!-- END CONTAINER -->
- 
-      <!-- START COPYRIGHT SECTION -->    
-       <div class="copyright">
-     <div class="container clearfix">
-        <div class="sixteen columns">   
-        <div class="copyright-logo"><a href="#"><img src="images/facecolor/logo.png" title="logo" alt="logo"/></a></div>   
-           <div class="social-icons">
-              <div class="social-icon social-email"><a href="mailto:hallo@example.com" target="_blank" data-original-title="Email">Email</a></div>
-              <div class="social-icon social-behance"><a href="#" target="_blank" data-original-title="Behance">Behance</a></div>
-              <div class="social-icon social-delicious"><a href="#" target="_blank" data-original-title="Delicious">Delicious</a></div>
-              <div class="social-icon social-deviantart"><a href="#" target="_blank" data-original-title="Deviantart">Deviantart</a></div>
-              <div class="social-icon social-facebook"><a href="#" target="_blank" data-original-title="Facebook">Facebook</a></div>
-              <div class="social-icon social-flickr"><a href="#" target="_blank" data-original-title="Flickr">Flickr</a></div>
-              <div class="social-icon social-forrst"><a href="#" target="_blank" data-original-title="Forrst">Forrst</a></div>
-           </div>
-      <p>&copy; 2014 All Rights Reserved.</p>
-            
-         </div> <!-- END SIXTEEN COLUMNS -->        
-    </div><!-- END CONTAINER -->
-     </div>
-     <!-- END COPYRIGHT SECTION -->  
-      
+    </div><!-- END PAGE WRAP -->
+
+
+  <div id="blueimp-gallery" class="blueimp-gallery">
+      <!-- The container for the modal slides -->
+      <div class="slides"></div>
+      <!-- Controls for the borderless lightbox -->
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <!-- The modal dialog, which will be used to wrap the lightbox content -->
+      <div class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body next"></div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default pull-left prev">
+                          <i class="glyphicon glyphicon-chevron-left"></i>
+                          Previous
+                      </button>
+                      <button type="button" class="btn btn-primary next">
+                          Next
+                          <i class="glyphicon glyphicon-chevron-right"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
-    <!-- END CONTACT SECTION -->    
-  
+                           
+  <div id="logo2" class="modal hide fade.in animated fadeIn">
+    <!-- START services BIO -->       
+    <div class="member-bio">
+      <div class="container">      
+        <a href="#" class="close" data-dismiss="modal">×</a>
+        <div class="member-role"><!-- START MEMBER NAME AND ROLE --> 
+          <h1>PORSCHE</h1>
+          <h4 class="highlight">Highlight/Title </h4>
+        </div><!-- END MEMBER NAME AND ROLE -->  
+        <div class="row">
+          <div class="seven columns">
+            <img src="images/commercial/3.jpg" alt="services">  
+          </div><!-- END COLUMN -->   
+          <div class="eight columns member-description">
+            <h2>Heading</h2>
+            <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+            <h3>Sub Heading</h3>
+            <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+          </div><!-- END COLUMN -->
+        </div><!-- END ROW -->  
+      </div><!-- END CONTAINER --> 
+    </div><!-- END services BIO -->                     
+  </div>
+
+  <div id="logo3" class="modal hide fade.in animated fadeIn">
+    <!-- START services BIO -->       
+    <div class="member-bio">
+      <div class="container">      
+        <a href="#" class="close" data-dismiss="modal">×</a>
+        <div class="member-role"><!-- START MEMBER NAME AND ROLE --> 
+          <h1>MERCEDES</h1>
+          <h4 class="highlight">Highlight/Title </h4>
+        </div><!-- END MEMBER NAME AND ROLE -->  
+        <div class="row">
+          <div class="seven columns">
+            <img src="images/commercial/1.jpg" alt="services">  
+          </div><!-- END COLUMN -->   
+          <div class="eight columns member-description">
+            <h2>Heading</h2>
+            <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+            <h3>Sub Heading</h3>
+            <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+          </div><!-- END COLUMN --> 
+        </div><!-- END ROW -->  
+      </div><!-- END CONTAINER --> 
+    </div><!-- END services BIO -->                     
+  </div>
+
+  <div id="commercial-detail" class="modal hide fade.in animated fadeIn">
+    <!-- START services BIO -->       
+    <div class="member-bio">
+      <div class="container">      
+        <a href="#" class="close" data-dismiss="modal">×</a>
+        <div class="member-role"><!-- START MEMBER NAME AND ROLE --> 
+          <h1>MAIN TITLE</h1>
+          <h4 class="highlight">Highlight/Title </h4>
+        </div><!-- END MEMBER NAME AND ROLE -->  
+        <div class="row">
+          <div class="seven columns">
+            <img src="images/commercial/7.jpg" alt="services">  
+          </div><!-- END COLUMN -->   
+          <div class="eight columns member-description">
+            <h2>Heading</h2>
+            <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+            <h3>Sub Heading1</h3>
+            <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+            <h3>Sub Heading2</h3>
+            <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+          </div><!-- END COLUMN --> 
+ 
+          <div class="gallery-container">
+            <h2>Image Gallery</h2>
+            <a href="images/commercial/1.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/1.jpg">
+            </a>
+            <a href="images/commercial/2.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/2.jpg">
+            </a>
+            <a href="images/commercial/3.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/3.jpg">
+            </a>
+            <a href="images/commercial/4.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/4.jpg">
+            </a>
+            <a href="images/commercial/5.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/5.jpg">
+            </a>
+            <a href="images/commercial/6.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/6.jpg">
+            </a>
+            <a href="images/commercial/7.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/7.jpg">
+            </a>
+            <a href="images/commercial/8.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/8.jpg">
+            </a>
+            <a href="images/commercial/9.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/9.jpg">
+            </a>
+            <a href="images/commercial/10.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/10.jpg">
+            </a>
+            <a href="images/commercial/11.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/11.jpg">
+            </a>
+            <a href="images/commercial/12.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/12.jpg">
+            </a>
+            <a href="images/commercial/13.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/13.jpg">
+            </a>
+            <a href="images/commercial/14.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/14.jpg">
+            </a>
+            <a href="images/commercial/15.jpg" title="title here" data-gallery="commercial">
+              <img src="images/commercial/15.jpg">
+            </a>
+            
+          </div>
+          <div class="gallery-container" >
+            <h2>Video Gallery</h2>
+
+
+            <a href="#" onclick="showVideoGallery(0);">
+              <img src="http://media.w3.org/2010/05/sintel/poster.png"/>
+            </a>
+            <a href="#" onclick="showVideoGallery(1);">
+              <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Big.Buck.Bunny.-.Opening.Screen.png/800px-Big.Buck.Bunny.-.Opening.Screen.png"/>
+            </a>
+            <a href="#" onclick="showVideoGallery(2);">
+              <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Elephants_Dream_s1_proog.jpg/800px-Elephants_Dream_s1_proog.jpg"/>
+            </a>
+          </div>
+        </div><!-- END ROW -->  
+      </div><!-- END CONTAINER --> 
+    </div><!-- END services BIO -->                     
+  </div>
 
 
 
 
 
 
-   </div><!-- END PAGE WRAP -->
-   
+  <div id="film-detail" class="modal hide fade.in animated fadeIn">
+    <!-- START services BIO -->       
+    <div class="member-bio">
+      <div class="container">      
+        <a href="#" class="close" data-dismiss="modal">×</a>
+        <div class="member-role"><!-- START MEMBER NAME AND ROLE --> 
+          <h1>Main Title</h1>
+          <h4 class="highlight">Highlight/Title </h4>
+        </div><!-- END MEMBER NAME AND ROLE -->  
+        <div class="row">
+          <div class="seven columns">
+            <img src="images/film/16.jpg" alt="services">  
+          </div><!-- END COLUMN -->   
+          <div class="eight columns member-description">
+            <h2>Heading</h2>
+            <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+            <h3>Sub Heading1</h3>
+            <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+            <h3>Sub Heading2</h3>
+            <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+          </div><!-- END COLUMN --> 
 
-
+          <div class="gallery-container">
+            <h2>Image Gallery</h2>
+            <a href="images/film/1.jpg" title="title here" data-gallery="film">
+              <img src="images/film/1.jpg">
+            </a>
+            <a href="images/film/2.jpg" title="title here" data-gallery="film">
+              <img src="images/film/2.jpg">
+            </a>
+            <a href="images/film/3.jpg" title="title here" data-gallery="film">
+              <img src="images/film/3.jpg">
+            </a>
+            <a href="images/film/4.jpg" title="title here" data-gallery="film">
+              <img src="images/film/4.jpg">
+            </a>
+            <a href="images/film/5.jpg" title="title here" data-gallery="film">
+              <img src="images/film/5.jpg">
+            </a>
+            <a href="images/film/6.jpg" title="title here" data-gallery="film">
+              <img src="images/film/6.jpg">
+            </a>
+            <a href="images/film/7.jpg" title="title here" data-gallery="film">
+              <img src="images/film/7.jpg">
+            </a>
+            <a href="images/film/8.jpg" title="title here" data-gallery="film">
+              <img src="images/film/8.jpg">
+            </a>
+            <a href="images/film/9.jpg" title="title here" data-gallery="film">
+              <img src="images/film/9.jpg">
+            </a>
+            <a href="images/film/10.jpg" title="title here" data-gallery="film">
+              <img src="images/film/10.jpg">
+            </a>
+            <a href="images/film/11.jpg" title="title here" data-gallery="film">
+              <img src="images/film/11.jpg">
+            </a>
+            <a href="images/film/12.jpg" title="title here" data-gallery="film">
+              <img src="images/film/12.jpg">
+            </a>
+            <a href="images/film/13.jpg" title="title here" data-gallery="film">
+              <img src="images/film/13.jpg">
+            </a>
+            
+          </div>
+        </div><!-- END ROW -->  
+      </div><!-- END CONTAINER --> 
+    </div><!-- END services BIO -->                     
+  </div>
 
   <!-- FACECOLOR THEME SCRIPTS -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>  
@@ -320,20 +869,20 @@
     <script type="text/javascript" src="js/jquery.appear.js"></script>  
     <script type="text/javascript" src="js/jquery.slabtext.min.js"></script>   
     <script type="text/javascript" src="js/jquery.fittext.js"></script>   
-  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-  <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
-  <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-  <script type="text/javascript" src="js/jquery.sticky.js"></script>
-  <script type="text/javascript" src="js/selectnav.min.js"></script>    
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="js/selectnav.min.js"></script>    
     <script type="text/javascript" src="js/SmoothScroll.js"></script>   
     <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>    
     <script type="text/javascript" src="js/isotope.js"></script>   
     <script type="text/javascript" src="js/bootstrap-modal.js"></script>   
+    <script type="text/javascript" src="js/bootstrap-image-gallary.js"></script>
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>   
     <script type="text/javascript" src="js/shortcodes.js"></script>        
-  <script type="text/javascript" src="js/scripts.js"></script>           
+    <script type="text/javascript" src="js/scripts.js"></script>           
     <script type="text/javascript" src="js/facecolor.js"></script>               
-    
-   
 
 </body>
 

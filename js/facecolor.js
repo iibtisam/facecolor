@@ -5,13 +5,14 @@ $(document).ready(function(){
 	homeCols();
 	adjustHomeColumnHeight();
 	menuEffect();
-
+	showNews();
 });
 
 
 $( window ).resize(function() {
 	homeCols();
 	adjustHomeColumnHeight();
+	adjustNewsPanel();
 });
 
 
@@ -23,23 +24,65 @@ var menuEffect = function(){
     });
 }
 
+
 var homeCols = function(){
-
-	winHeight = $(window).height() - 65;
-	winWidth = $(window).width();
-
-	// $('.parallax-bg').css('height',winHeight);
-	// $('.home-parallax').css('height',winHeight);
-	$('.homeColumn').css('height',winHeight);
-	$('.homeColumn').css('width',(winWidth/3)-1);
-
+	$('.homeColumn').css('height',($(window).height() - 65));
+	$('.homeColumn').css('width',(Math.floor($(window).width()/3)));
 }
 
+
+var adjustNewsPanel = function(){
+	var winWidth = $(window).width();
+	var newsLength = $('.news-bg').length;
+	var showNewsLength = $('.four_custom').length;
+	if(winWidth <=751){
+		if(showNewsLength >1){
+			for(i=1;i<4;i++){
+				$($('.four_custom')[i]).removeClass('four_custom');
+			}
+		}
+	}else{
+		var index = -1;
+		console.log('showNewsLength', showNewsLength);
+		if(showNewsLength == 1){
+			for(i=0;i<newsLength;i++){
+				if($($('.news-bg')[i]).hasClass('four_custom')){
+					index = i;
+				}
+			}
+			if(index != -1){
+				var temp = Math.floor(index/4);
+				for(i=0;i<4;i++){
+					$($('.news-bg')[(temp*4)+i]).addClass('four_custom');
+				}
+			}
+		}
+	}
+}
+
+
+var showNews = function(){
+	var winWidth = $(window).width();
+	var newsLength = $('.news-bg').length;
+	if(winWidth <=750){
+		if(newsLength != 0){
+			$($('.news-bg')[0]).addClass('four_custom');
+		}
+	}else{
+		if(newsLength < 4){
+			$('.news-bg').addClass('four_custom');
+		}else{
+			for(var i=0;i<4;i++){
+				$($('.news-bg')[i]).addClass('four_custom');
+			}
+		}
+	}
+}
+
+
 var adjustHomeColumnHeight = function(){
-	
 	var winHeight = $('.homeColumn').height();
 
-	
 	for(var i=0; i< $('.homeColumn').length; i++){
 		var textHeight = $($(".homeColumn")[i]).children('.overlayHomeColumnText').height()+50;
 		var overlayHeight = winHeight - textHeight;
@@ -47,41 +90,159 @@ var adjustHomeColumnHeight = function(){
 		$($('.overlayHomeColumn')[i]).css('height',overlayHeight);
 	
 		$($(".homeColumn")[i]).unbind("hover")
+
 		$($(".homeColumn")[i]).hover(function(){ //mouseenter
-	
 	       	$(this).children('.overlayHomeColumn').animate({height:0},200);
 	       	$(this).children('.overlayHomeColumnText').delay(200).animate({'bottom': overlayHeight/2},200);
-	
 	    }, function(){ //mouseleave
-	
 	        $(this).children('.overlayHomeColumn').delay(200).animate({height:overlayHeight},200);
 	        $(this).children('.overlayHomeColumnText').animate({'bottom': 0},200);
-	
 	    });
 	}
-
 	$($('#joinus').children('.parallax-bg')).css("height","100%");
 }
 
 
-
-
 var openColumnInfo = function(col_no){
-	var href = window.location.href;
-	var location = href.split('#');
-
-	window.location.href = location[0]+'#!projects/project-'+col_no+'.html';
+	if(col_no == 1){
+		$('#film').show();
+		$('#commercial').show();
+		$("html, body").animate({ 
+	        scrollTop: $('#commercial').offset().top 
+	    }, 1000);
+	}else{
+		$('#commercial').hide();
+		$('#film').show();
+		$("html, body").animate({ 
+	        scrollTop: $('#film').offset().top 
+	    }, 1000);
+	}
 }
 
 
 var removeOverlay = function(that){
-
 	var center = ($('.homeColumn').height()/2) - ($(that).children('.overlayHomeColumnText').height()+50)/2;
-
 	$(that).children('.overlayHomeColumnText').css('bottom', center);
-
 }
+
 
 var resetOverlay = function(that){
 	$(that).children('.overlayHomeColumnText').css('bottom', 0);
+}
+
+
+var showNextNews = function(){
+	var winWidth = $(window).width();
+	var newsLength = $('.news-bg').length;
+	var showNewsLength = $('.four_custom').length;
+	var index = -1
+	if(winWidth <=750){
+
+		for(i=0;i<newsLength;i++){
+			if($($('.news-bg')[i]).hasClass('four_custom')){
+				index = i;
+			}
+		}
+		if(index != -1){
+			if((index+1)<newsLength){
+				$($('.news-bg')[index]).removeClass('four_custom');
+				$($('.news-bg')[index+1]).addClass('four_custom');
+			}
+		}
+	}else{
+		for(i=0;i<newsLength;i++){
+			if($($('.news-bg')[i]).hasClass('four_custom')){
+				index = i;
+			}
+		}
+		if(index != -1){
+			if((index+1)<newsLength){
+				for(var i=3;i>=0;i--){
+					$($('.news-bg')[index-i]).removeClass('four_custom');
+				}
+				for(var i=1;i<=4;i++){
+					$($('.news-bg')[index+i]).addClass('four_custom');
+				}
+			}
+		}		
+	}
+}
+
+
+var showPreviousNews = function(){
+	var winWidth = $(window).width();
+	var newsLength = $('.news-bg').length;
+	var showNewsLength = $('.four_custom').length;
+	var index = -1
+	if(winWidth <=750){
+
+		for(i=0;i<newsLength;i++){
+			if($($('.news-bg')[i]).hasClass('four_custom')){
+				index = i;
+			}
+		}
+		if(index != -1){
+			if((index-1)>=0){
+				$($('.news-bg')[index]).removeClass('four_custom');
+				$($('.news-bg')[index-1]).addClass('four_custom');
+			}
+		}
+	}else{
+		for(i=0;i<newsLength;i++){
+			if($($('.news-bg')[i]).hasClass('four_custom')){
+				index = i;
+			}
+		}
+		if(index != -1){
+			if((index-1)>=3){
+
+				for(var i=0;i<4;i++){
+					$($('.news-bg')[index-i]).removeClass('four_custom');
+				}
+				index = (Math.floor(index/4))*4;
+				for(var i=1;i<=4;i++){
+					$($('.news-bg')[index-i]).addClass('four_custom');
+				}
+			}
+		}		
+	}
+}
+
+
+videos = [{
+                title: 'Sintel',
+                href: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                type: 'video/mp4',
+                poster: 'http://media.w3.org/2010/05/sintel/poster.png'
+            },{
+                title: 'Big Buck Bunny',
+                href: 'http://upload.wikimedia.org/wikipedia/commons/7/75/Big_Buck_Bunny_Trailer_400p.ogg',
+                type: 'video/ogg',
+                poster: 'http://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Big.Buck.Bunny.-.Opening.Screen.png800px-Big.Buck.Bunny.-.Opening.Screen.png'
+            },{
+                title: 'Elephants Dream',
+                href: 'http://upload.wikimedia.org/wikipedia/commons/transcoded/8/83/Elephants_Dream_%28high_quality%29.ogv/Elephants_Dream_%28high_quality%29.ogv.360p.webm',
+                type: 'video/webm',
+                poster: 'http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Elephants_Dream_s1_proog.jpg/800px-Elephants_Dream_s1_proog.jpg'
+            // },{
+            //     title: 'LES TWINS - An Industry Ahead',
+            //     href: 'http://www.youtube.com/watch?v=zi4CIXpx7Bg',
+            //     type: 'text/html',
+            //     youtube: 'zi4CIXpx7Bg',
+            //     poster: 'http://img.youtube.com/vi/zi4CIXpx7Bg/0.jpg'
+            // },{
+            //     title: 'KN1GHT - Last Moon',
+            //     href: 'http://vimeo.com/73686146',
+            //     type: 'text/html',
+            //     vimeo: '73686146',
+            //     poster: 'http://b.vimeocdn.com/ts/448/835/448835699_960.jpg'
+            }];
+
+
+var showVideoGallery = function(index){
+	arr = [];
+	for (i=0;i<videos.length; i++){
+		arr[i] = videos[(index+i)%videos.length];
+	}
+	blueimp.Gallery(arr, $('#blueimp-gallery').data());
 }

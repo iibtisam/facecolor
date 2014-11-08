@@ -268,6 +268,9 @@ alert-message.info a {
 .fullwidth.grey {
 	background-color: #f5f5f5;
 }
+.fullwidth.black {
+	background-color: #000000;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*	MILESTONE COUNT
@@ -493,12 +496,16 @@ blockquote p {
 }
 
 /*--------------------------------------------------------------------------*/
-/*	TEAM MEMBER
+/*	services MEMBER
 /*--------------------------------------------------------------------------*/
+#services{
+	background-color: #000000;
+}
+
 .member-role {
     padding-bottom: 10px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #282828;
 	clear:both;
 }
 
@@ -512,51 +519,55 @@ blockquote p {
 	font-size:26px;
 }
 
-.team-member {
+.services-logo {
 	float: left;
-	width: 33.33%;
+	width: 225px;
 	text-align: center;
+	margin:3px;
+	border:1px solid #444;
 }
-.team-member .team-thumb {
+.services-logo .services-thumb {
 	line-height: 0;
 }
-.team-member .team-thumb img {
+.services-logo .services-thumb img {
 	width: 100%;
-	height: auto;
+	height: 170px;
 }
-.team-member .team-desc {
+.services-logo .services-thumb.film-thumb img{
+	height: 340px;
+}
+.services-logo .services-desc {
 	padding: 10px;
 	font-size: 14px;
-	margin-left: -1px;
-	border: 1px solid #e8e8e8;
+	border: 1px solid #151515;
 	border-top: 0;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-ms-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
-	background:#ffffff;	
+	background:#000000;	
 }
-.team-member:hover .team-desc {
+.services-logo:hover .services-desc {
 	background:#ffd600;
 	color:#ffffff;
 }
-.team-member .team-desc h4 {
+.services-logo .services-desc h4 {
 	margin-bottom: 5px;
 	font-size: 16px;
 }
-.team-member .team-desc h5 span {
+.services-logo .services-desc h5 span {
 	font-size: 12px;
 	font-weight: normal;
 	color: #aaa;
 }
-.team-member .team-desc a {
+.services-logo .services-desc a {
 	font-weight: normal;
 	display: block;
 	font-size: 13px;
 	margin-top: 0px;
 }
-.team-member .team-desc a span i {
+.services-logo .services-desc a span i {
 	color: #3CF;
 	margin-right: 5px;
 }
@@ -575,10 +586,11 @@ blockquote p {
 }
 .modal {
 	position: fixed;
-	top: 10%;
+	top: 0;
 	left: 0;
 	z-index: 1050;
 	width: 100%;
+	height: 100%;
 	overflow: auto;
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding-box;
@@ -588,6 +600,7 @@ blockquote p {
 	border-radius: 3px;
 	display: none;
 	text-align:left;
+	background-color: #000000;
 }
 
 
@@ -613,6 +626,7 @@ blockquote p {
 .member-bio {
 	overflow-y:auto;
 	text-align:center;
+	padding-top: 30px;
 }
 
 .member-bio .member-description {
@@ -682,7 +696,7 @@ opacity: .95;
 	filter: alpha(opacity=0);
 	top: 30%;
 }
-.team-overlay {
+.services-overlay {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -690,7 +704,7 @@ opacity: .95;
 	height: 100%;
 	width: 100%;
 }
-.team-overlay .img-overlay {
+.services-overlay .img-overlay {
 	opacity: 0.8;
 	filter: alpha(opacity=80);
 	height: 100%;
@@ -702,7 +716,7 @@ opacity: .95;
 	transition: all 0.2s ease;
 }
 .img-overlay {
-	background: #ffffff;
+	background: #000000;
 }
 .overlay-content {
 	text-align: center;
