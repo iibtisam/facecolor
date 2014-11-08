@@ -2,6 +2,7 @@
 	float:left; 
 	cursor: pointer;
 	position: relative;
+	width: 33.3%;
 }
 
 .homeColumn1{
@@ -35,7 +36,7 @@
 	left: 0;
 	z-index: 12;
 	color: #fff;
-	font-size: 20px;
+	font-size: 16px;
 	text-shadow: -2px 3px 3px rgba(0,0,0,1);
 
 }
@@ -70,6 +71,7 @@ nav.dark .main-menu div{
 	width: 0;
 	overflow: hidden;
 	margin: 0px;
+	display: none;
 }
 
 .news-bg .news-image{
@@ -107,4 +109,23 @@ nav.dark .main-menu div{
 
 .black-background{
 	background-color: #000000;
+}
+
+.modal-open{
+	overflow: hidden !important;
+}
+
+.left-column{
+	float: left;
+	width: 48%;
+}
+
+.right-column{
+	float: right;
+	width: 48%;
+}
+
+.news-column{
+	clear: both;
+	margin-bottom: 20px;
 }

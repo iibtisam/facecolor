@@ -507,6 +507,7 @@ blockquote p {
     margin-bottom: 30px;
     border-bottom: 1px solid #282828;
 	clear:both;
+	padding-top: 40px;
 }
 
 .member-role h1 {
@@ -626,7 +627,7 @@ blockquote p {
 .member-bio {
 	overflow-y:auto;
 	text-align:center;
-	padding-top: 30px;
+	padding-top: 10px;
 }
 
 .member-bio .member-description {
@@ -636,16 +637,22 @@ blockquote p {
 
 /* MODAL CSS3 ANIMATIONS */
 .animated {
-	-webkit-animation-fill-mode: both;
+/*	-webkit-animation-fill-mode: both;
 	-moz-animation-fill-mode: both;
 	-ms-animation-fill-mode: both;
 	-o-animation-fill-mode: both;
 	animation-fill-mode: both;
-	-webkit-animation-duration: .6s;
-	-moz-animation-duration: .6s;
-	-ms-animation-duration: .6s;
-	-o-animation-duration: .6s;
-	animation-duration: .6s;
+	-webkit-animation-duration: 1.6s;
+	-moz-animation-duration: 1.6s;
+	-ms-animation-duration: 1.6s;
+	-o-animation-duration: 1.6s;
+	animation-duration: 1.6s;
+*/
+	-webkit-transition: all 2.2s ease;
+	-moz-transition: all 2.2s ease;
+	-ms-transition: all 2.2s ease;
+	-o-transition: all 2.2s ease;
+	transition: all 2.2s ease;
 }
  @-webkit-keyframes fadeIn {
  0% {
