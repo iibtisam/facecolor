@@ -55,14 +55,17 @@
 
           !that.$element.parent().length && that.$element.appendTo(document.body) //don't move modals dom position
 
-          that.$element
-            .show()
+
+          that.$element.animate({opacity: 1, height: "toggle"},300);
+
+
+          //that.$element.show()
 
           if (transition) {
             that.$element[0].offsetWidth // force reflow
           }
 
-          that.$element.addClass('in')
+         // that.$element.addClass('in')
 
           transition ?
             that.$element.one($.support.transition.end, function () { that.$element.trigger('shown') }) :
@@ -78,18 +81,20 @@
 
         var that = this
         this.isShown = false
-
         $('body').removeClass('modal-open')
 
         escape.call(this)
 
-        this.$element
-          .trigger('hide')
-          .removeClass('in')
+        // this.$element
+        //   .trigger('hide')
+        //   .removeClass('in')
+        
+          that.$element.animate({opacity: 0.7,height: "toggle"},300);
 
-        $.support.transition && this.$element.hasClass('fade') ?
-          hideWithTransition.call(this) :
-          hideModal.call(this)
+
+        // $.support.transition && this.$element.hasClass('fade') ?
+        //   hideWithTransition.call(this) :
+        //   hideModal.call(this)
       }
 
   }

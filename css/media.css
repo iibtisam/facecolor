@@ -157,7 +157,7 @@ nav .container .columns, nav .cotainer .column, #ajaxpage .columns, #ajaxpage .c
 	font-size:11px;
 }
 .parallax, .parallax-content, .parallax .overlay, .color-block, .color-block-content {
-	height:400px;
+	height:600px;
 }
 
 .services-logo {
@@ -264,7 +264,7 @@ nav .container {
 .parallax,  
 .parallax .parallax-content,  
 .parallax .overlay {
-	height: 580px;
+	height: 780px;
 }
 .bg1, .bg2, .bg3, .bg4 {
 	background-size: 100%;

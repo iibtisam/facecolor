@@ -12,7 +12,6 @@
 /*global define, window */
 
 (function (factory) {
-    'use strict';
     if (typeof define === 'function' && define.amd) {
         define([
             'jquery',
@@ -25,7 +24,6 @@
         );
     }
 }(function ($, Gallery) {
-    'use strict';
 
     $.extend(Gallery.prototype.options, {
         useBootstrapModal: true

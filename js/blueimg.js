@@ -12,7 +12,6 @@
 /* global define, window, document */
 
 (function (factory) {
-    'use strict';
     if (typeof define === 'function' && define.amd) {
         define([
             'jquery',
@@ -25,7 +24,6 @@
         );
     }
 }(function ($, Gallery) {
-    'use strict';
 
     // Global click handler to open links with data-gallery attribute
     // in the Gallery lightbox:

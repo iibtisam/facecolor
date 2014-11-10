@@ -51,13 +51,39 @@
 
     .container .one-third.column                { width: 300px; }
     .container .two-thirds.column               { width: 620px; }
+    #news-container-wrapper{
+        float: left;
+        overflow: hidden;
+        width: 880px;
+    }
+
     #news-container .four_custom.columns{ 
         width: 210px; 
         margin-left: 5px;
         margin-right: 5px;
     }
+    .news-bg .news-image{
+        width: 206px;
+        margin: 2px; 
+        height:180px; 
+        overflow:hidden;
+    }
+    .news-bg .news-date{
+        width: 200px;
+        background: #ff0099;
+        margin: 2px;
+        padding-right: 5px;
+        text-align: right;
+    }
+    .news-bg .news-desc{
+        width: 190px;
+        padding:5px 10px;
+        height: 85px;
+        display: inline-block;
+    }
+
     .container.news-container{
-        top: 140px;
+        top: 240px;
     }
 
     /* Offsets */
@@ -83,7 +109,7 @@
 
 @media only screen and (min-width: 959px) and (max-width: 1200px) {
         .container.news-container{
-            top: 50px;
+            top: 150px;
         }
 
 }
@@ -121,9 +147,16 @@
         .container .fifteen.columns                 { width: 700px; }
         .container .sixteen.columns                 { width: 748px; }
 
+        #news-container-wrapper{
+            width: 690px;
+        }
         #news-container .four_custom.columns             { width: 162px; }
+        .news-bg .news-image{width: 158px;}
+        .news-bg .news-date{width: 152px;}
+        .news-bg .news-desc{width: 142px;}
+
         .container.news-container{
-            top: 50px;
+            top: 150px;
         }
 
 
@@ -182,9 +215,16 @@
         .container .one-third.column,
         .container .two-thirds.column  { width: 300px; }
 
+        #news-container-wrapper{
+            width: 230px;
+        }
         #news-container .four_custom.columns { width: 220px; }
+        .news-bg .news-image{width: 216px;}
+        .news-bg .news-date{width: 210px;}
+        .news-bg .news-desc{width: 200px;}
+
         .container.news-container{
-            top: 50px;
+            top: 100px;
         }
   
 
